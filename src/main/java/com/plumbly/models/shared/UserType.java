@@ -1,4 +1,4 @@
-package com.plumbly.plumbly.models.shared;
+package com.plumbly.models.shared;
 
 public enum UserType {
     HOUSEHOLDER,

@@ -1,4 +1,4 @@
-package com.plumbly.plumbly.utils;
+package com.plumbly.utils;
 
 public enum YearsOfExperience {
     ZERO_TO_TWO_YEARS,

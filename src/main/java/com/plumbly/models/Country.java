@@ -1,21 +1,24 @@
-package com.plumbly.plumbly.models;
+package com.plumbly.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class Profession {
+public class Country {
     @Id
     private String id;
     private String name;
-    private boolean requiresCertificate;
+    private String isoCode;
+    private String phonePrefix;
 
     @Override
     public String toString() {
-        return "Profession{" +
+        return "Country{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", requiresCertificate=" + requiresCertificate +
+                ", isoCode='" + isoCode + '\'' +
+                ", phonePrefix='" + phonePrefix + '\'' +
                 '}';
     }
 }
+

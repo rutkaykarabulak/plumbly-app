@@ -1,9 +1,9 @@
-package com.plumbly.plumbly.models;
+package com.plumbly.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.plumbly.plumbly.models.shared.UserType;
+import com.plumbly.models.shared.UserType;
 
 import java.util.Date;
 

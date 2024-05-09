@@ -1,8 +1,8 @@
-package com.plumbly.plumbly.repositories;
+package com.plumbly.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.plumbly.plumbly.models.Country;
+import com.plumbly.models.Country;
 
 public interface CountryRepository extends CrudRepository<Country, String>{
     

@@ -1,9 +1,9 @@
-package com.plumbly.plumbly.models;
+package com.plumbly.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.plumbly.plumbly.utils.YearsOfExperience;
+import com.plumbly.utils.YearsOfExperience;
 
 @Document
 public class Technician {

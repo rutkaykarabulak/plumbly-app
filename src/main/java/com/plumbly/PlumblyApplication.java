@@ -1,4 +1,4 @@
-package com.plumbly.plumbly;
+package com.plumbly;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

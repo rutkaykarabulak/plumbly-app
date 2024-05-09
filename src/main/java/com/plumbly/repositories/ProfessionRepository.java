@@ -1,8 +1,8 @@
-package com.plumbly.plumbly.repositories;
+package com.plumbly.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.plumbly.plumbly.models.Profession;
+import com.plumbly.models.Profession;
 
 public interface ProfessionRepository extends CrudRepository<Profession, String>{
     

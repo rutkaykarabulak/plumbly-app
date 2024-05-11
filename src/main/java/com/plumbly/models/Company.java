@@ -11,6 +11,12 @@ public class Company {
     private String phoneNumber;
     private String addressId;
 
+    public Company(String location, String phoneNumber, String addressId) {
+        this.location = location;
+        this.phoneNumber = phoneNumber;
+        this.addressId = addressId;
+    }
+
     @Override
     public String toString() {
         return "Company{" +
@@ -19,5 +25,37 @@ public class Company {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", addressId='" + addressId + '\'' +
                 '}';
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(String addressId) {
+        this.addressId = addressId;
     }
 }

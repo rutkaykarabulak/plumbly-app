@@ -3,14 +3,18 @@ package com.plumbly.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.WriteResultChecking;
+import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
+
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.ServerAddress;
+import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import com.plumbly.models.User;
 
 import java.util.Collections;
 
@@ -51,4 +55,15 @@ public class MongoConfig extends AbstractMongoClientConfiguration{
         return mongoClient;
     }
 
+    @Override
+    @Bean
+    public MongoTemplate mongoTemplate(MongoDatabaseFactory databaseFactory, MappingMongoConverter converter) {
+        MongoTemplate mongoTemplate = new MongoTemplate(databaseFactory, converter);
+        if ("development".equalsIgnoreCase(System.getenv("ENVIRONMENT"))) {
+            mongoTemplate.setWriteResultChecking(WriteResultChecking.EXCEPTION); // please check
+            // https://docs.spring.io/spring-data/mongodb/reference/mongodb/template-config.html
+        }
+        mongoTemplate.setWriteConcern(WriteConcern.ACKNOWLEDGED);
+        return mongoTemplate;
+    }
 }

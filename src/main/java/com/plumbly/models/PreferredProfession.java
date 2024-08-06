@@ -11,10 +11,12 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "preferred_profession")
 public class PreferredProfession {
     @Id

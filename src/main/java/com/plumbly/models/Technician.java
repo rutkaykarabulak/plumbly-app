@@ -9,10 +9,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "technician")
 public class Technician {
     @Id
@@ -20,7 +24,7 @@ public class Technician {
     @Column(name = "id")
     private int id;
     
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "plumbee_id")
     private Plumbee plumbee;
     

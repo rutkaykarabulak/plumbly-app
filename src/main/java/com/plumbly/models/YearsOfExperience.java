@@ -8,11 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @AllArgsConstructor
-@Table(name = "years_of_experiencce")
+@NoArgsConstructor
+@Table(name = "years_of_experience")
 public class YearsOfExperience {
     @Id
     @Column(name = "id")
